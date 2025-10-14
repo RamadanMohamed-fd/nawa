@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <title>نواة - قالب موقع الطاقة المتجددة</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icon Font Stylesheet -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+
+    <style>
+      /* تنسيق زر الحصول على عرض سعر */
+      .get-offer-btn {
+        position: fixed;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1000;
+        background: linear-gradient(45deg, #fd7e14, #ffc107);
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 30px;
+        font-weight: bold;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        font-size: 16px;
+      }
+
+      .get-offer-btn:hover {
+        transform: translateY(-50%) scale(1.05);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+      }
+
+      /* تحسينات للتنقل السلس */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* تحسينات للاستجابة على الأجهزة الصغيرة */
+      @media (max-width: 768px) {
+        .get-offer-btn {
+          left: 10px;
+          padding: 10px 15px;
+          font-size: 14px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- زر الحصول على عرض سعر -->
+    <!-- <button class="get-offer-btn" onclick="scrollToQuote()">
+      احصل على عرض سعر
+    </button> -->
+
+    <!-- Spinner Start -->
+    <div
+      id="spinner"
+      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+    >
+      <div
+        class="spinner-border text-primary"
+        style="width: 3rem; height: 3rem"
+        role="status"
+      >
+        <span class="sr-only">جاري التحميل...</span>
+      </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark p-0">
+      <div
+        class=""
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+        "
+      >
+        <div class="col-lg-7 px-5">
+          <div
+            style="display: flex; align-items: center"
+            class="h-100 d-inline-flex align-items-center"
+          >
+            <small class="fa fa-map-marker-alt text-primary ms-2"></small>
+            <small style="color: #8c9094">سنهور - الفيوم - مصر</small>
+          </div>
+          <div
+            style="
+              display: flex;
+              align-items: center;
+              margin-top: 4px;
+              font-family: cursive;
+            "
+            class="h-100 d-inline-flex align-items-center me-4"
+          >
+            <small class="fa fa-phone-alt text-primary ms-2"></small>
+            <a
+              href="tel:+20 101 288 7315"
+              dir="ltr"
+              style="text-decoration: none"
+            >
+              <small style="color: #8c9094">+20 101 288 7315</small>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-5 px-5">
+          <div
+            class="h-100 d-inline-flex justify-content-end w-100 align-items-center mx-n2"
+          >
+            <a
+              class="btn btn-square btn-link rounded-0 border-0 border-start border-secondary"
+              href=""
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a
+              class="btn btn-square btn-link rounded-0 border-0 border-start border-secondary"
+              href=""
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a
+              class="btn btn-square btn-link rounded-0 border-0 border-start border-secondary"
+              href=""
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a class="btn btn-square btn-link rounded-0" href=""
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Topbar End -->
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
+      <a
+        href="#home"
+        class="navbar-brand d-flex align-items-center border-start px-4 px-lg-5"
+      >
+        <!-- <h2 class="m-0 text-primary">سولارتك</h2> -->
+        <img
+          src="/img/logo.png"
+          alt="logo"
+          style="width: 100px; height: auto"
+        />
+      </a>
+      <button
+        type="button"
+        class="navbar-toggler ms-4"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarCollapse"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav me-auto p-4 p-lg-0">
+          <a href="#home" class="nav-item nav-link active">
+            <i class="fas fa-solar-panel ms-2"></i>الرئيسية
+          </a>
+          <a href="#about" class="nav-item nav-link">
+            <i class="fas fa-industry ms-2"></i>من نحن
+          </a>
+          <a href="#services" class="nav-item nav-link">
+            <i class="fas fa-wind ms-2"></i>الخدمات
+          </a>
+          <a href="#projects" class="nav-item nav-link">
+            <i class="fas fa-hard-hat ms-2"></i>المشاريع
+          </a>
+          <a href="#contact" class="nav-item nav-link">
+            <i class="fas fa-headset ms-2"></i>اتصل بنا
+          </a>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Home Section -->
+    <section id="home">
+      <!-- Carousel Start -->
+      <div class="container-fluid p-0 pb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="owl-carousel header-carousel position-relative">
+          <div
+            class="owl-carousel-item position-relative"
+            data-dot="<img src='img/carousel-1.jpg'>"
+          >
+            <img class="img-fluid" src="img/carousel-1.jpg" alt="" />
+            <div class="owl-carousel-inner">
+              <div class="container">
+                <div class="row">
+                  <div class="col-10 col-lg-8">
+                    <h1 class="display-2 text-white animated slideInDown">
+                      رواد في مجال الطاقة الشمسية والمتجددة
+                    </h1>
+                    <p class="fs-5 fw-medium text-white mb-4 pb-3">
+                      نحن نقدم حلولاً مبتكرة في مجال الطاقة المتجددة لتلبية
+                      احتياجاتك من الطاقة النظيفة والمستدامة.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="owl-carousel-item position-relative"
+            data-dot="<img src='img/carousel-2.jpg'>"
+          >
+            <img class="img-fluid" src="img/carousel-2.jpg" alt="" />
+            <div class="owl-carousel-inner">
+              <div class="container">
+                <div class="row">
+                  <div class="col-10 col-lg-8">
+                    <h1 class="display-2 text-white animated slideInDown">
+                      حلول الطاقة المستدامة للمستقبل
+                    </h1>
+                    <p class="fs-5 fw-medium text-white mb-4 pb-3">
+                      نساعدك في التحول إلى الطاقة النظيفة وتقليل تكاليف الطاقة
+                      مع الحفاظ على البيئة.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="owl-carousel-item position-relative"
+            data-dot="<img src='img/carousel-3.jpg'>"
+            style="background: #000"
+          >
+            <img class="img-fluid" src="img/carousel-3.jpg" alt="" />
+            <div class="owl-carousel-inner">
+              <div class="container">
+                <div class="row">
+                  <div class="col-10 col-lg-8">
+                    <h1 class="display-2 text-white animated slideInDown">
+                      خبرة 25+ سنة في الطاقة المتجددة
+                    </h1>
+                    <p class="fs-5 fw-medium text-white mb-4 pb-3">
+                      نتمتع بخبرة واسعة في تصميم وتنفيذ مشاريع الطاقة الشمسية
+                      وطاقة الرياح والطاقة الكهرومائية.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Carousel End -->
+
+      <!-- Feature Start -->
+      <section class="">
+        <div class="container text-center">
+          <div class="row g-4">
+            <div class="col-6 col-lg-3">
+              <div class="card border-0 shadow-sm h-100 p-4">
+                <div class="icon-circle mb-3 mx-auto">
+                  <i class="fa fa-users text-white"></i>
+                </div>
+                <h2 class="fw-bold mb-1" data-toggle="counter-up">3453</h2>
+                <h5 class="mb-2">عملاء سعداء</h5>
+                <p class="text-muted mb-0">
+                  نحن نفتخر بثقة عملائنا ورضاهم عن خدماتنا
+                </p>
+              </div>
+            </div>
+
+            <div class="col-6 col-lg-3">
+              <div class="card border-0 shadow-sm h-100 p-4">
+                <div class="icon-circle mb-3 mx-auto">
+                  <i class="fa fa-check text-white"></i>
+                </div>
+                <h2 class="fw-bold mb-1" data-toggle="counter-up">4234</h2>
+                <h5 class="mb-2">مشروع منفذ</h5>
+                <p class="text-muted mb-0">
+                  أنجزنا الآلاف من المشاريع بنجاح في مختلف أنحاء العالم
+                </p>
+              </div>
+            </div>
+
+            <div class="col-6 col-lg-3">
+              <div class="card border-0 shadow-sm h-100 p-4">
+                <div class="icon-circle mb-3 mx-auto">
+                  <i class="fa fa-award text-white"></i>
+                </div>
+                <h2 class="fw-bold mb-1" data-toggle="counter-up">3123</h2>
+                <h5 class="mb-2">جوائز حصلنا عليها</h5>
+                <p class="text-muted mb-0">
+                  حصلنا على العديد من الجوائز المحلية والدولية
+                </p>
+              </div>
+            </div>
+
+            <div class="col-6 col-lg-3">
+              <div class="card border-0 shadow-sm h-100 p-4">
+                <div class="icon-circle mb-3 mx-auto">
+                  <i class="fa fa-users-cog text-white"></i>
+                </div>
+                <h2 class="fw-bold mb-1" data-toggle="counter-up">1831</h2>
+                <h5 class="mb-2">عمالة خبيرة</h5>
+                <p class="text-muted mb-0">
+                  فريقنا من الخبراء والمهندسين المتخصصين
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Feature Start -->
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <!-- About Start -->
+      <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
+        <div class="container about px-lg-0">
+          <div class="row g-0 mx-lg-0">
+            <div
+              class="col-lg-6 pe-lg-0 wow fadeIn"
+              data-wow-delay="0.1s"
+              style="min-height: 400px"
+            >
+              <div class="position-relative h-100">
+                <img
+                  class="position-absolute img-fluid w-100 h-100"
+                  src="img/about.jpg"
+                  style="object-fit: cover"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div
+              class="col-lg-6 about-text py-5 wow fadeIn"
+              data-wow-delay="0.5s"
+            >
+              <div class="p-lg-5 ps-lg-0">
+                <h6 class="text-primary">من نحن</h6>
+                <h1 class="mb-4">
+                  25+ سنة خبرة في صناعة الطاقة الشمسية والمتجددة
+                </h1>
+                <p>
+                  نحن شركة رائدة في مجال الطاقة المتجددة، نقدم حلولاً مبتكرة
+                  ومستدامة لتلبية احتياجات الطاقة في العصر الحديث.
+                </p>
+                <p>
+                  <i class="fa fa-check-circle text-primary ms-3"></i>حلول طاقة
+                  متكاملة
+                </p>
+                <p>
+                  <i class="fa fa-check-circle text-primary ms-3"></i>تقنيات
+                  متطورة وحديثة
+                </p>
+                <p>
+                  <i class="fa fa-check-circle text-primary ms-3"></i>فريق من
+                  الخبراء المتخصصين
+                </p>
+                <a href="" class="btn btn-primary rounded-pill py-3 px-5 mt-3"
+                  >استكشف المزيد</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- About End -->
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+      <!-- Service Start -->
+      <div class="container-xxl py-5">
+        <div class="container">
+          <div
+            class="text-center mx-auto mb-5 wow fadeInUp"
+            data-wow-delay="0.1s"
+            style="max-width: 600px"
+          >
+            <h6 class="text-primary">خدماتنا</h6>
+            <h1 class="mb-4">نحن رواد في عالم الطاقة المتجددة</h1>
+          </div>
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+              <div class="service-item rounded overflow-hidden">
+                <img class="img-fluid" src="img/img-600x400-1.jpg" alt="" />
+                <div class="position-relative p-4 pt-0">
+                  <div class="service-icon">
+                    <i class="fa fa-solar-panel fa-3x"></i>
+                  </div>
+                  <h4 class="mb-3">الألواح الشمسية</h4>
+                  <p>
+                    نقدم حلولاً شاملة لأنظمة الطاقة الشمسية للمنازل والشركات.
+                  </p>
+                  <a class="small fw-medium" href=""
+                    >اقرأ المزيد<i class="fa fa-arrow-left ms-2"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+              <div class="service-item rounded overflow-hidden">
+                <img class="img-fluid" src="img/img-600x400-2.jpg" alt="" />
+                <div class="position-relative p-4 pt-0">
+                  <div class="service-icon">
+                    <i class="fa fa-wind fa-3x"></i>
+                  </div>
+                  <h4 class="mb-3">توربينات الرياح</h4>
+                  <p>
+                    أنظمة طاقة الرياح المتطورة لتوليد الطاقة النظيفة والمستدامة.
+                  </p>
+                  <a class="small fw-medium" href=""
+                    >اقرأ المزيد<i class="fa fa-arrow-left ms-2"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+              <div class="service-item rounded overflow-hidden">
+                <img class="img-fluid" src="img/img-600x400-3.jpg" alt="" />
+                <div class="position-relative p-4 pt-0">
+                  <div class="service-icon">
+                    <i class="fa fa-lightbulb fa-3x"></i>
+                  </div>
+                  <h4 class="mb-3">محطات الطاقة الكهرومائية</h4>
+                  <p>
+                    حلول الطاقة الكهرومائية الصغيرة والمتوسطة للمجتمعات المحلية.
+                  </p>
+                  <a class="small fw-medium" href=""
+                    >اقرأ المزيد<i class="fa fa-arrow-left ms-2"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Service End -->
+
+      <!-- Solar Systems Section -->
+      <section class="py-5 bg-white" id="solar-systems">
+        <div class="container">
+          <div class="text-center mb-5">
+            <h6 class="text-primary">أنظمة الطاقة الشمسية</h6>
+            <h2 class="fw-bold mb-3">
+              تعرف على الأنظمة المختلفة للطاقة الشمسية
+            </h2>
+            <p class="text-muted">
+              كل نظام له فكرته واستخدامه حسب موقعك واحتياجك للطاقة
+            </p>
+          </div>
+
+          <div class="row g-4 justify-content-center">
+            <!-- On Grid -->
+            <div class="col-lg-6">
+              <div class="solar-card p-4 rounded-3 shadow-sm h-100">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="solar-icon bg-soft-primary text-primary ms-3">
+                    <i class="fas fa-plug"></i>
+                  </div>
+                  <h4 class="fw-bold mb-0">نظام أون جريد (On-Grid)</h4>
+                </div>
+                <p class="text-dark mb-2">
+                  <strong>📌 الفكرة: </strong> الألواح تولّد كهرباء، ولو فيه
+                  زيادة، تروح للشبكة. ولو الإنتاج قليل، تكمل من الشبكة.
+                </p>
+                <p class="text-muted mb-1">
+                  <strong>⚡ مناسب لـ: </strong> اللي عنده عداد تبادلي وعايز
+                  يبيع الفائض.
+                </p>
+                <p class="text-muted mb-3">
+                  <strong>🔌 العيب: </strong> لو الكهرباء العمومية قطعت، النظام
+                  بيقف.
+                </p>
+                <div class="solar-note">
+                  💬 <strong>للمزارع: </strong> طول النهار تشغل من الشمس،
+                  والزيادة تبيعها للكهرباء، لكن لو الكهربا العمومية قطعت، المحطة
+                  هتسكت.
+                </div>
+              </div>
+            </div>
+
+            <!-- Off Grid -->
+            <div class="col-lg-6">
+              <div class="solar-card p-4 rounded-3 shadow-sm h-100">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="solar-icon bg-soft-success text-success ms-3">
+                    <i class="fas fa-battery-full"></i>
+                  </div>
+                  <h4 class="fw-bold mb-0">نظام أوف جريد (Off-Grid)</h4>
+                </div>
+                <p class="text-dark mb-2">
+                  <strong>📌 الفكرة: </strong> الألواح تولّد كهرباء وتخزنها في
+                  بطاريات.
+                </p>
+                <p class="text-muted mb-1">
+                  <strong>⚡ مناسب لـ: </strong> الأماكن اللي مفيهاش كهرباء
+                  أصلاً.
+                </p>
+                <p class="text-muted mb-3">
+                  <strong>🔌 العيب: </strong> البطاريات غالية وبتحتاج تغيير بعد
+                  سنين.
+                </p>
+                <div class="solar-note">
+                  💬 <strong>للمزارع:</strong> يعني انت ماشي من غير شبكة كهرباء،
+                  تشحن بطاريات من الشمس وتشتغل عليها بالليل، لكن البطاريات تمنها
+                  مش قليل.
+                </div>
+              </div>
+            </div>
+
+            <!-- Hybrid -->
+            <div class="col-lg-6">
+              <div class="solar-card p-4 rounded-3 shadow-sm h-100">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="solar-icon bg-soft-warning text-warning ms-3">
+                    <i class="fas fa-solar-panel"></i>
+                  </div>
+                  <h4 class="fw-bold mb-0">نظام هجين (Hybrid)</h4>
+                </div>
+                <p class="text-dark mb-2">
+                  <strong>📌 الفكرة: </strong> يجمع بين البطاريات والشبكة.
+                </p>
+                <p class="text-muted mb-1">
+                  <strong>⚡ مناسب لـ: </strong> اللي عايز كهرباء حتى لو
+                  العمومية قطعت.
+                </p>
+                <p class="text-muted mb-3">
+                  <strong>🔌 الميزة: </strong> فيه أمان، وممكن تزود الاستفادة.
+                </p>
+                <div class="solar-note">
+                  💬 <strong>للمزارع: </strong> تشغل من الشمس، ولو الشمس راحت،
+                  تكمل من البطاريات أو الشبكة، حتى لو الكهربا العمومية قطعت، انت
+                  شغال.
+                </div>
+              </div>
+            </div>
+
+            <!-- Self Consumption -->
+            <div class="col-lg-6">
+              <div class="solar-card p-4 rounded-3 shadow-sm h-100">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="solar-icon bg-soft-danger text-danger ms-3">
+                    <i class="fas fa-home"></i>
+                  </div>
+                  <h4 class="fw-bold mb-0">
+                    نظام الاستهلاك الذاتي (Self-Consumption)
+                  </h4>
+                </div>
+                <p class="text-dark mb-2">
+                  <strong>📌 الفكرة: </strong> الألواح تشغّل أحمالك في النهار،
+                  وأي نقص تكمله من الشبكة.
+                </p>
+                <p class="text-muted mb-1">
+                  <strong>⚡ مناسب لـ: </strong> اللي عايز يقلل الفاتورة من غير
+                  بطاريات ولا تبادل.
+                </p>
+                <p class="text-muted mb-3">
+                  <strong>🔌 العيب: </strong> مش هيشتغل لو الكهرباء العمومية
+                  قطعت.
+                </p>
+                <div class="solar-note">
+                  💬 <strong>للمزارع: </strong> طول النهار تشتغل من الشمس،
+                  وبالليل من العداد العادي، والفاتورة تقل، لكن لو الكهربا
+                  العمومية قطعت، المحطة توقف.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <!-- Projects Start -->
+      <div class="container-xxl py-5">
+        <div class="container">
+          <div
+            class="text-center mx-auto mb-5 wow fadeInUp"
+            data-wow-delay="0.1s"
+            style="max-width: 600px"
+          >
+            <h6 class="text-primary">مشاريعنا</h6>
+            <h1 class="mb-4">
+              قم بزيارة أحدث مشاريعنا في الطاقة الشمسية والمتجددة
+            </h1>
+          </div>
+          <div class="row mt-n2 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="col-12 text-center">
+              <ul class="list-inline mb-5" id="portfolio-flters">
+                <li class="mx-2 active" data-filter="*">الكل</li>
+                <li class="mx-2" data-filter=".first">الألواح الشمسية</li>
+                <!-- <li class="mx-2" data-filter=".second">توربينات الرياح</li> -->
+                <li class="mx-2" data-filter=".third">
+                  محطات الطاقة الكهرومائية
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div
+            class="row g-4 portfolio-container wow fadeInUp"
+            data-wow-delay="0.5s"
+          >
+            <div class="col-lg-4 col-md-6 portfolio-item first">
+              <div class="portfolio-img rounded overflow-hidden">
+                <img class="img-fluid" src="img/img-600x400-6.jpg" alt="" />
+                <div class="portfolio-btn">
+                  <a
+                    class="btn btn-lg-square btn-outline-light rounded-circle mx-1"
+                    href="img/img-600x400-6.jpg"
+                    data-lightbox="portfolio"
+                    ><i class="fa fa-eye"></i
+                  ></a>
+                  <a
+                    class="btn btn-lg-square btn-outline-light rounded-circle mx-1"
+                    href=""
+                    ><i class="fa fa-link"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="pt-3">
+                <p class="text-primary mb-0">الألواح الشمسية</p>
+                <hr class="text-primary w-25 my-2" />
+                <h5 class="lh-base">
+                  نحن رواد في صناعة الطاقة الشمسية والمتجددة
+                </h5>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item second">
+              <div class="portfolio-img rounded overflow-hidden">
+                <img class="img-fluid" src="img/img-600x400-5.jpg" alt="" />
+                <div class="portfolio-btn">
+                  <a
+                    class="btn btn-lg-square btn-outline-light rounded-circle mx-1"
+                    href="img/img-600x400-5.jpg"
+                    data-lightbox="portfolio"
+                    ><i class="fa fa-eye"></i
+                  ></a>
+                  <a
+                    class="btn btn-lg-square btn-outline-light rounded-circle mx-1"
+                    href=""
+                    ><i class="fa fa-link"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="pt-3">
+                <p class="text-primary mb-0">توربينات الرياح</p>
+                <hr class="text-primary w-25 my-2" />
+                <h5 class="lh-base">
+                  نحن رواد في صناعة الطاقة الشمسية والمتجددة
+                </h5>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item third">
+              <div class="portfolio-img rounded overflow-hidden">
+                <img class="img-fluid" src="img/img-600x400-4.jpg" alt="" />
+                <div class="portfolio-btn">
+                  <a
+                    class="btn btn-lg-square btn-outline-light rounded-circle mx-1"
+                    href="img/img-600x400-4.jpg"
+                    data-lightbox="portfolio"
+                    ><i class="fa fa-eye"></i
+                  ></a>
+                  <a
+                    class="btn btn-lg-square btn-outline-light rounded-circle mx-1"
+                    href=""
+                    ><i class="fa fa-link"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="pt-3">
+                <p class="text-primary mb-0">محطات الطاقة الكهرومائية</p>
+                <hr class="text-primary w-25 my-2" />
+                <h5 class="lh-base">
+                  نحن رواد في صناعة الطاقة الشمسية والمتجددة
+                </h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Projects End -->
+    </section>
+
+    <!-- Quote Section -->
+    <section id="quote">
+      <!-- Quote Start -->
+      <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
+        <div class="container quote px-lg-0">
+          <div class="row g-0 mx-lg-0">
+            <div
+              class="col-lg-6 pe-lg-0 wow fadeIn"
+              data-wow-delay="0.1s"
+              style="min-height: 400px"
+            >
+              <div class="position-relative h-100">
+                <img
+                  class="position-absolute img-fluid w-100 h-100"
+                  src="img/quote.jpg"
+                  style="object-fit: cover"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div
+              class="col-lg-6 quote-text py-5 wow fadeIn"
+              data-wow-delay="0.5s"
+            >
+              <div class="p-lg-5 ps-lg-0">
+                <h6 class="text-primary">عرض سعر مجاني</h6>
+                <h1 class="mb-4">احصل على عرض سعر مجاني</h1>
+                <p class="mb-4 pb-2">
+                  اطلب عرض سعر مجاني لمشروعك وسيقوم فريقنا بالاتصال بك لتقديم
+                  أفضل الحلول المناسبة لاحتياجاتك.
+                </p>
+                <form>
+                  <div class="row g-3">
+                    <div class="col-12 col-sm-6">
+                      <input
+                        type="text"
+                        class="form-control border-0"
+                        placeholder="اسمك"
+                        style="height: 55px"
+                      />
+                    </div>
+                    <div class="col-12 col-sm-6">
+                      <input
+                        type="email"
+                        class="form-control border-0"
+                        placeholder="بريدك الإلكتروني"
+                        style="height: 55px"
+                      />
+                    </div>
+                    <div class="col-12 col-sm-6">
+                      <input
+                        type="text"
+                        class="form-control border-0"
+                        placeholder="جوالك"
+                        style="height: 55px"
+                      />
+                    </div>
+                    <div class="col-12 col-sm-6">
+                      <select class="form-select border-0" style="height: 55px">
+                        <option selected>اختر الخدمة</option>
+                        <option value="1">الطاقة الشمسية</option>
+                        <option value="2">طاقة الرياح</option>
+                        <option value="3">طاقة كهرومائية</option>
+                      </select>
+                    </div>
+                    <div class="col-12">
+                      <textarea
+                        class="form-control border-0"
+                        placeholder="ملاحظات خاصة"
+                      ></textarea>
+                    </div>
+                    <div class="col-12">
+                      <button
+                        class="btn btn-primary rounded-pill py-3 px-5"
+                        type="submit"
+                      >
+                        إرسال
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Quote End -->
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <!-- Team Start -->
+      <div class="container-xxl py-5">
+        <div class="container">
+          <div
+            class="text-center mx-auto mb-5 wow fadeInUp"
+            data-wow-delay="0.1s"
+            style="max-width: 600px"
+          >
+            <h6 class="text-primary">أعضاء الفريق</h6>
+            <h1 class="mb-4">فريقنا ذو الخبرة الواسعة</h1>
+          </div>
+          <div class="row g-4">
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+              <div class="team-item rounded overflow-hidden">
+                <div class="d-flex">
+                  <img class="img-fluid w-75" src="img/team-1.jpg" alt="" />
+                  <div class="team-social w-25">
+                    <a
+                      class="btn btn-lg-square btn-outline-primary rounded-circle mt-3"
+                      href=""
+                      ><i class="fab fa-facebook-f"></i
+                    ></a>
+                    <a
+                      class="btn btn-lg-square btn-outline-primary rounded-circle mt-3"
+                      href=""
+                      ><i class="fab fa-twitter"></i
+                    ></a>
+                    <a
+                      class="btn btn-lg-square btn-outline-primary rounded-circle mt-3"
+                      href=""
+                      ><i class="fab fa-instagram"></i
+                    ></a>
+                  </div>
+                </div>
+                <div class="p-4">
+                  <h5>أحمد محمد</h5>
+                  <span>مدير المشاريع</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+              <div class="team-item rounded overflow-hidden">
+                <div class="d-flex">
+                  <img class="img-fluid w-75" src="img/team-2.jpg" alt="" />
+                  <div class="team-social w-25">
+                    <a
+                      class="btn btn-lg-square btn-outline-primary rounded-circle mt-3"
+                      href=""
+                      ><i class="fab fa-facebook-f"></i
+                    ></a>
+                    <a
+                      class="btn btn-lg-square btn-outline-primary rounded-circle mt-3"
+                      href=""
+                      ><i class="fab fa-twitter"></i
+                    ></a>
+                    <a
+                      class="btn btn-lg-square btn-outline-primary rounded-circle mt-3"
+                      href=""
+                      ><i class="fab fa-instagram"></i
+                    ></a>
+                  </div>
+                </div>
+                <div class="p-4">
+                  <h5>فاطمة عبدالله</h5>
+                  <span>مهندسة طاقة متجددة</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+              <div class="team-item rounded overflow-hidden">
+                <div class="d-flex">
+                  <img class="img-fluid w-75" src="img/team-3.jpg" alt="" />
+                  <div class="team-social w-25">
+                    <a
+                      class="btn btn-lg-square btn-outline-primary rounded-circle mt-3"
+                      href=""
+                      ><i class="fab fa-facebook-f"></i
+                    ></a>
+                    <a
+                      class="btn btn-lg-square btn-outline-primary rounded-circle mt-3"
+                      href=""
+                      ><i class="fab fa-twitter"></i
+                    ></a>
+                    <a
+                      class="btn btn-lg-square btn-outline-primary rounded-circle mt-3"
+                      href=""
+                      ><i class="fab fa-instagram"></i
+                    ></a>
+                  </div>
+                </div>
+                <div class="p-4">
+                  <h5>خالد إبراهيم</h5>
+                  <span>خبير أنظمة شمسية</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Team End -->
+
+      <!-- Testimonial Start -->
+      <div class="container-xxl py-5">
+        <div class="container">
+          <div
+            class="text-center mx-auto mb-5 wow fadeInUp"
+            data-wow-delay="0.1s"
+            style="max-width: 600px"
+          >
+            <h6 class="text-primary">آراء العملاء</h6>
+            <h1 class="mb-4">ماذا يقول عملاؤنا!</h1>
+          </div>
+          <div
+            class="owl-carousel testimonial-carousel wow fadeInUp"
+            data-wow-delay="0.1s"
+          >
+            <div class="testimonial-item text-center">
+              <div class="testimonial-img position-relative">
+                <img
+                  class="img-fluid rounded-circle mx-auto mb-5"
+                  src="img/testimonial-1.jpg"
+                />
+                <div class="btn-square bg-primary rounded-circle">
+                  <i class="fa fa-quote-left text-white"></i>
+                </div>
+              </div>
+              <div class="testimonial-text text-center rounded p-4">
+                <p>
+                  فريق محترف وخدمة ممتازة. قاموا بتركيب نظام الطاقة الشمسية
+                  لمنزلي وكانت النتيجة رائعة. أوصي بهم بشدة.
+                </p>
+                <h5 class="mb-1">محمد السيد</h5>
+                <span class="fst-italic">عميل</span>
+              </div>
+            </div>
+            <div class="testimonial-item text-center">
+              <div class="testimonial-img position-relative">
+                <img
+                  class="img-fluid rounded-circle mx-auto mb-5"
+                  src="img/testimonial-2.jpg"
+                />
+                <div class="btn-square bg-primary rounded-circle">
+                  <i class="fa fa-quote-left text-white"></i>
+                </div>
+              </div>
+              <div class="testimonial-text text-center rounded p-4">
+                <p>
+                  خبرة واسعة واحترافية عالية. مشروعنا مع الشركة كان ناجحاً بكل
+                  المقاييس. شكراً لفريق سولارتك.
+                </p>
+                <h5 class="mb-1">سارة عبد الرحمن</h5>
+                <span class="fst-italic">مديرة شركة</span>
+              </div>
+            </div>
+            <div class="testimonial-item text-center">
+              <div class="testimonial-img position-relative">
+                <img
+                  class="img-fluid rounded-circle mx-auto mb-5"
+                  src="img/testimonial-3.jpg"
+                />
+                <div class="btn-square bg-primary rounded-circle">
+                  <i class="fa fa-quote-left text-white"></i>
+                </div>
+              </div>
+              <div class="testimonial-text text-center rounded p-4">
+                <p>
+                  الدعم الفني ممتاز والخدمة بعد البيع رائعة. أنصح الجميع
+                  بالتعامل مع سولارتك للحلول الطاقة المتجددة.
+                </p>
+                <h5 class="mb-1">علي حسن</h5>
+                <span class="fst-italic">رجل أعمال</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Testimonial End -->
+    </section>
+
+    <!-- Footer Start -->
+    <div
+      class="container-fluid bg-dark text-body footer mt-5 pt-5 wow fadeIn"
+      data-wow-delay="0.1s"
+    >
+      <div class="container py-5">
+        <div class="row g-5">
+          <div class="col-lg-3 col-md-6">
+            <h5 class="text-white mb-4">عنواننا</h5>
+            <p class="mb-2">
+              <i class="fa fa-map-marker-alt me-3"></i>123 الشارع, نيويورك,
+              الولايات المتحدة
+            </p>
+            <p class="mb-2">
+              <i class="fa fa-phone-alt me-3"></i>+012 345 67890
+            </p>
+            <p class="mb-2">
+              <i class="fa fa-envelope me-3"></i>info@example.com
+            </p>
+            <div class="d-flex pt-2">
+              <a class="btn btn-square btn-outline-light btn-social" href=""
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a class="btn btn-square btn-outline-light btn-social" href=""
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a class="btn btn-square btn-outline-light btn-social" href=""
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a class="btn btn-square btn-outline-light btn-social" href=""
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h5 class="text-white mb-4">روابط سريعة</h5>
+            <a class="btn btn-link" href="#about">من نحن</a>
+            <a class="btn btn-link" href="#contact">اتصل بنا</a>
+            <a class="btn btn-link" href="#services">خدماتنا</a>
+            <a class="btn btn-link" href="">الشروط والأحكام</a>
+            <a class="btn btn-link" href="">الدعم</a>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h5 class="text-white mb-4">معرض المشاريع</h5>
+            <div class="row g-2">
+              <div class="col-4">
+                <img class="img-fluid rounded" src="img/gallery-1.jpg" alt="" />
+              </div>
+              <div class="col-4">
+                <img class="img-fluid rounded" src="img/gallery-2.jpg" alt="" />
+              </div>
+              <div class="col-4">
+                <img class="img-fluid rounded" src="img/gallery-3.jpg" alt="" />
+              </div>
+              <div class="col-4">
+                <img class="img-fluid rounded" src="img/gallery-4.jpg" alt="" />
+              </div>
+              <div class="col-4">
+                <img class="img-fluid rounded" src="img/gallery-5.jpg" alt="" />
+              </div>
+              <div class="col-4">
+                <img class="img-fluid rounded" src="img/gallery-6.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h5 class="text-white mb-4">النشرة البريدية</h5>
+            <p>اشترك في نشرتنا البريدية لتصلك آخر أخبارنا وعروضنا.</p>
+            <div class="position-relative mx-auto" style="max-width: 400px">
+              <input
+                class="form-control border-0 w-100 py-3 pe-4 ps-5"
+                type="text"
+                placeholder="بريدك الإلكتروني"
+              />
+              <button
+                type="button"
+                class="btn btn-primary py-2 position-absolute top-0 start-0 mt-2 ms-2"
+              >
+                اشتراك
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="copyright">
+          <div class="row">
+            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+              &copy; <a href="#">سولارتك</a>, جميع الحقوق محفوظة.
+            </div>
+            <div class="col-md-6 text-center text-md-end">
+              صمم بواسطة <a href="https://htmlcodex.com">HTML Codex</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a
+      href="#"
+      class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"
+      ><i class="bi bi-arrow-up"></i
+    ></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <script>
+      // دالة للانتقال إلى قسم عرض السعر
+      function scrollToQuote() {
+        document.getElementById("quote").scrollIntoView({
+          behavior: "smooth",
+        });
+      }
+
+      // إضافة التنقل السلس لجميع روابط التنقل
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute("href");
+          if (targetId !== "#") {
+            document.querySelector(targetId).scrollIntoView({
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
