@@ -39,7 +39,7 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
 
-    <style>
+     <style>
       /* تنسيق زر الحصول على عرض سعر */
       .get-offer-btn {
         position: fixed;
@@ -47,7 +47,7 @@
         top: 50%;
         transform: translateY(-50%);
         z-index: 1000;
-        background: linear-gradient(45deg, #fd7e14, #ffc107);
+        background: linear-gradient(45deg, #32c36c, #ffc107);
         color: white;
         border: none;
         padding: 12px 20px;
@@ -77,6 +77,176 @@
           padding: 10px 15px;
           font-size: 14px;
         }
+      }
+
+      /* Project Gallery Styles */
+      .project-card {
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        transition: all 0.4s ease;
+        margin-bottom: 30px;
+        background: white;
+        height: 100%;
+        /* border: 1px solid #8c9094; */
+      }
+
+      .project-card:hover {
+        transform: translateY(-10px);
+        /* box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15); */
+      }
+
+      .project-img {
+        height: 250px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .project-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      .project-card:hover .project-img img {
+        transform: scale(1.1);
+      }
+
+      .project-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+      }
+
+      .project-card:hover .project-overlay {
+        opacity: 1;
+      }
+
+      .project-overlay a {
+        color: white;
+        font-size: 24px;
+        margin: 0 10px;
+        transition: transform 0.3s ease;
+      }
+
+      .project-overlay a:hover {
+        transform: scale(1.2);
+      }
+
+      .project-info {
+        padding: 20px;
+      }
+
+      .project-title {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #333;
+      }
+
+      .project-address {
+        color: #666;
+        font-size: 14px;
+        display: flex;
+        align-items: flex-start;
+      }
+
+      .project-address i {
+        margin-left: 8px;
+        margin-top: 3px;
+        color: #32c36c;
+      }
+
+      /* Animation for page load */
+      .animate-on-scroll {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.8s ease, transform 0.8s ease;
+      }
+
+      .animate-on-scroll.animated {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Solar Systems Section Styles */
+      .solar-card {
+        border-left: 4px solid;
+        transition: all 0.3s ease;
+      }
+
+      .solar-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+      }
+
+      .solar-icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+      }
+
+      .bg-soft-primary {
+        background-color: rgba(13, 110, 253, 0.1);
+      }
+
+      .bg-soft-success {
+        background-color: rgba(25, 135, 84, 0.1);
+      }
+
+      .bg-soft-warning {
+        background-color: rgba(255, 193, 7, 0.1);
+      }
+
+      .bg-soft-danger {
+        background-color: rgba(220, 53, 69, 0.1);
+      }
+
+      .solar-note {
+        background-color: #f8f9fa;
+        border-radius: 8px;
+        padding: 12px;
+        margin-top: 15px;
+        border-right: 3px solid #32c36c;
+      }
+
+      /* Icon Circle */
+      .icon-circle {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background: #32c36c;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* Custom button styles */
+      .btn-primary {
+        background-color: #32c36c;
+        border-color: #32c36c;
+      }
+
+      .btn-primary:hover {
+        background-color: #e5670c;
+        border-color: #e5670c;
+      }
+
+      .text-primary {
+        color: #32c36c !important;
       }
     </style>
   </head>
@@ -115,11 +285,12 @@
       >
         <div class="col-lg-7 px-5">
           <div
-            style="display: flex; align-items: center"
-            class="h-100 d-inline-flex align-items-center"
+            style="display: flex; align-items: center; margin-top: 10px;"
+            class=" d-inline-flex align-items-center"
           >
-            <small class="fa fa-map-marker-alt text-primary ms-2"></small>
-            <small style="color: #8c9094">سنهور - الفيوم - مصر</small>
+           <a href="https://maps.apple.com/place?coordinate=30.680145,30.069258&name=%D8%A7%D9%84%D9%86%D9%88%D8%A8%D8%A7%D8%B1%D9%8A%D8%A9%20%D8%A7%D9%84%D8%AC%D8%AF%D9%8A%D8%AF%D8%A9&map=h" class="mb-2">
+              <i class="fa fa-map-marker-alt ms-2"></i>النوبارية الجديدة 
+            </a>
           </div>
           <div
             style="
@@ -136,7 +307,7 @@
               dir="ltr"
               style="text-decoration: none"
             >
-              <small style="color: #8c9094">+20 101 288 7315</small>
+              <small >+20 101 288 7315</small>
             </a>
           </div>
         </div>
@@ -467,142 +638,155 @@
       </div>
       <!-- Service End -->
 
-      <!-- Solar Systems Section -->
       <section class="py-5 bg-white" id="solar-systems">
         <div class="container">
-          <div class="text-center mb-5">
-            <h6 class="text-primary">أنظمة الطاقة الشمسية</h6>
-            <h2 class="fw-bold mb-3">
-              تعرف على الأنظمة المختلفة للطاقة الشمسية
-            </h2>
-            <p class="text-muted">
-              كل نظام له فكرته واستخدامه حسب موقعك واحتياجك للطاقة
-            </p>
-          </div>
-
-          <div class="row g-4 justify-content-center">
-            <!-- On Grid -->
-            <div class="col-lg-6">
-              <div class="solar-card p-4 rounded-3 shadow-sm h-100">
-                <div class="d-flex align-items-center mb-3">
-                  <div class="solar-icon bg-soft-primary text-primary ms-3">
-                    <i class="fas fa-plug"></i>
-                  </div>
-                  <h4 class="fw-bold mb-0">نظام أون جريد (On-Grid)</h4>
-                </div>
-                <p class="text-dark mb-2">
-                  <strong>📌 الفكرة: </strong> الألواح تولّد كهرباء، ولو فيه
-                  زيادة، تروح للشبكة. ولو الإنتاج قليل، تكمل من الشبكة.
+            <div class="section-header text-center">
+                <p class="section-subtitle">أنظمة الطاقة الشمسية</p>
+                <h2 class="section-title">تعرف على الأنظمة المختلفة للطاقة الشمسية</h2>
+                <p class="section-description">
+                    كل نظام له خصائصه واستخداماته وفقاً لموقعك الجغرافي واحتياجاتك من الطاقة
                 </p>
-                <p class="text-muted mb-1">
-                  <strong>⚡ مناسب لـ: </strong> اللي عنده عداد تبادلي وعايز
-                  يبيع الفائض.
-                </p>
-                <p class="text-muted mb-3">
-                  <strong>🔌 العيب: </strong> لو الكهرباء العمومية قطعت، النظام
-                  بيقف.
-                </p>
-                <div class="solar-note">
-                  💬 <strong>للمزارع: </strong> طول النهار تشغل من الشمس،
-                  والزيادة تبيعها للكهرباء، لكن لو الكهربا العمومية قطعت، المحطة
-                  هتسكت.
-                </div>
-              </div>
             </div>
 
-            <!-- Off Grid -->
-            <div class="col-lg-6">
-              <div class="solar-card p-4 rounded-3 shadow-sm h-100">
-                <div class="d-flex align-items-center mb-3">
-                  <div class="solar-icon bg-soft-success text-success ms-3">
-                    <i class="fas fa-battery-full"></i>
-                  </div>
-                  <h4 class="fw-bold mb-0">نظام أوف جريد (Off-Grid)</h4>
+            <div class="row g-4 justify-content-center">
+                <!-- On Grid -->
+                <div class="col-lg-6">
+                    <div class="solar-card on-grid p-4 rounded-3 shadow-sm h-100 position-relative">
+                        <span class="system-badge">النظام المتصل بالشبكة</span>
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="solar-icon bg-soft-primary text-primary ms-3">
+                                <i class="fas fa-plug"></i>
+                            </div>
+                            <h4 class="solar-card-title mb-0">النظام المتصل بالشبكة (On-Grid)</h4>
+                        </div>
+                        
+                        <ul class="feature-list">
+                            <li>
+                                <span class="feature-label">المبدأ الأساسي:</span> 
+                                تقوم الألواح الشمسية بتوليد الكهرباء، ويتم استخدام الفائض في تغذية شبكة الكهرباء العامة
+                            </li>
+                            <li>
+                                <span class="feature-label">الاستخدام الأمثل:</span> 
+                                المناطق التي تتوفر فيها خدمة العدادات التبادلية لبيع الطاقة الفائضة
+                            </li>
+                            <li>
+                                <span class="feature-label">القيد الرئيسي:</span> 
+                                يتوقف النظام عن العمل في حال انقطاع التيار الكهربائي من الشبكة العامة
+                            </li>
+                        </ul>
+                        
+                        <div class="solar-note">
+                            <span class="note-label">💬 للمزارع:</span>
+                            يمكن تشغيل المضخات والأنظمة الزراعية طوال النهار باستخدام الطاقة الشمسية، وبيع الفائض إلى شركة الكهرباء. لكن النظام يتوقف في حال انقطاع التيار الكهربائي من الشبكة العامة.
+                        </div>
+                    </div>
                 </div>
-                <p class="text-dark mb-2">
-                  <strong>📌 الفكرة: </strong> الألواح تولّد كهرباء وتخزنها في
-                  بطاريات.
-                </p>
-                <p class="text-muted mb-1">
-                  <strong>⚡ مناسب لـ: </strong> الأماكن اللي مفيهاش كهرباء
-                  أصلاً.
-                </p>
-                <p class="text-muted mb-3">
-                  <strong>🔌 العيب: </strong> البطاريات غالية وبتحتاج تغيير بعد
-                  سنين.
-                </p>
-                <div class="solar-note">
-                  💬 <strong>للمزارع:</strong> يعني انت ماشي من غير شبكة كهرباء،
-                  تشحن بطاريات من الشمس وتشتغل عليها بالليل، لكن البطاريات تمنها
-                  مش قليل.
-                </div>
-              </div>
-            </div>
 
-            <!-- Hybrid -->
-            <div class="col-lg-6">
-              <div class="solar-card p-4 rounded-3 shadow-sm h-100">
-                <div class="d-flex align-items-center mb-3">
-                  <div class="solar-icon bg-soft-warning text-warning ms-3">
-                    <i class="fas fa-solar-panel"></i>
-                  </div>
-                  <h4 class="fw-bold mb-0">نظام هجين (Hybrid)</h4>
+                <!-- Off Grid -->
+                <div class="col-lg-6">
+                    <div class="solar-card off-grid p-4 rounded-3 shadow-sm h-100 position-relative">
+                        <span class="system-badge">النظام المنعزل</span>
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="solar-icon bg-soft-success text-success ms-3">
+                                <i class="fas fa-battery-full"></i>
+                            </div>
+                            <h4 class="solar-card-title mb-0">النظام المنعزل (Off-Grid)</h4>
+                        </div>
+                        
+                        <ul class="feature-list">
+                            <li>
+                                <span class="feature-label">المبدأ الأساسي:</span> 
+                                تقوم الألواح الشمسية بتوليد الكهرباء وتخزينها في بطاريات للاستخدام عند الحاجة
+                            </li>
+                            <li>
+                                <span class="feature-label">الاستخدام الأمثل:</span> 
+                                المناطق النائية التي لا تتوفر فيها خدمة الكهرباء من الشبكة العامة
+                            </li>
+                            <li>
+                                <span class="feature-label">القيد الرئيسي:</span> 
+                                تكلفة البطاريات مرتفعة وتحتاج إلى استبدال بعد عدة سنوات من الاستخدام
+                            </li>
+                        </ul>
+                        
+                        <div class="solar-note">
+                            <span class="note-label">💬 للمزارع:</span>
+                            نظام مستقل تماماً عن شبكة الكهرباء العامة، حيث يتم شحن البطاريات بالطاقة الشمسية نهاراً وتشغيل الأنظمة الزراعية ليلاً. لكن تكلفة البطاريات وعمرها الافتراضي يمثل تحدياً مالياً.
+                        </div>
+                    </div>
                 </div>
-                <p class="text-dark mb-2">
-                  <strong>📌 الفكرة: </strong> يجمع بين البطاريات والشبكة.
-                </p>
-                <p class="text-muted mb-1">
-                  <strong>⚡ مناسب لـ: </strong> اللي عايز كهرباء حتى لو
-                  العمومية قطعت.
-                </p>
-                <p class="text-muted mb-3">
-                  <strong>🔌 الميزة: </strong> فيه أمان، وممكن تزود الاستفادة.
-                </p>
-                <div class="solar-note">
-                  💬 <strong>للمزارع: </strong> تشغل من الشمس، ولو الشمس راحت،
-                  تكمل من البطاريات أو الشبكة، حتى لو الكهربا العمومية قطعت، انت
-                  شغال.
-                </div>
-              </div>
-            </div>
 
-            <!-- Self Consumption -->
-            <div class="col-lg-6">
-              <div class="solar-card p-4 rounded-3 shadow-sm h-100">
-                <div class="d-flex align-items-center mb-3">
-                  <div class="solar-icon bg-soft-danger text-danger ms-3">
-                    <i class="fas fa-home"></i>
-                  </div>
-                  <h4 class="fw-bold mb-0">
-                    نظام الاستهلاك الذاتي (Self-Consumption)
-                  </h4>
+                <!-- Hybrid -->
+                <div class="col-lg-6">
+                    <div class="solar-card hybrid p-4 rounded-3 shadow-sm h-100 position-relative">
+                        <span class="system-badge">النظام الهجين</span>
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="solar-icon bg-soft-warning text-warning ms-3">
+                                <i class="fas fa-solar-panel"></i>
+                            </div>
+                            <h4 class="solar-card-title mb-0">النظام الهجين (Hybrid)</h4>
+                        </div>
+                        
+                        <ul class="feature-list">
+                            <li>
+                                <span class="feature-label">المبدأ الأساسي:</span> 
+                                يجمع بين مزايا النظام المتصل بالشبكة والنظام المنعزل باستخدام البطاريات والتوصيل بالشبكة العامة
+                            </li>
+                            <li>
+                                <span class="feature-label">الاستخدام الأمثل:</span> 
+                                الراغبين في استمرارية التيار الكهربائي حتى في حال انقطاع الشبكة العامة
+                            </li>
+                            <li>
+                                <span class="feature-label">الميزة الأساسية:</span> 
+                                يوفر أماناً إضافياً ومرونة في إدارة الطاقة مع إمكانية بيع الفائض للشبكة
+                            </li>
+                        </ul>
+                        
+                        <div class="solar-note">
+                            <span class="note-label">💬 للمزارع:</span>
+                            تشغيل الأنظمة الزراعية بالطاقة الشمسية نهاراً، والتحول إلى البطاريات أو الشبكة العامة عند غياب الشمس. يضمن استمرارية العمل حتى في حال انقطاع التيار الكهربائي من الشبكة العامة.
+                        </div>
+                    </div>
                 </div>
-                <p class="text-dark mb-2">
-                  <strong>📌 الفكرة: </strong> الألواح تشغّل أحمالك في النهار،
-                  وأي نقص تكمله من الشبكة.
-                </p>
-                <p class="text-muted mb-1">
-                  <strong>⚡ مناسب لـ: </strong> اللي عايز يقلل الفاتورة من غير
-                  بطاريات ولا تبادل.
-                </p>
-                <p class="text-muted mb-3">
-                  <strong>🔌 العيب: </strong> مش هيشتغل لو الكهرباء العمومية
-                  قطعت.
-                </p>
-                <div class="solar-note">
-                  💬 <strong>للمزارع: </strong> طول النهار تشتغل من الشمس،
-                  وبالليل من العداد العادي، والفاتورة تقل، لكن لو الكهربا
-                  العمومية قطعت، المحطة توقف.
+
+                <!-- Self Consumption -->
+                <div class="col-lg-6">
+                    <div class="solar-card self-consumption p-4 rounded-3 shadow-sm h-100 position-relative">
+                        <span class="system-badge">نظام الاستهلاك الذاتي</span>
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="solar-icon bg-soft-danger text-danger ms-3">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <h4 class="solar-card-title mb-0">نظام الاستهلاك الذاتي (Self-Consumption)</h4>
+                        </div>
+                        
+                        <ul class="feature-list">
+                            <li>
+                                <span class="feature-label">المبدأ الأساسي:</span> 
+                                تزويد الأحمال الكهربائية مباشرة بالطاقة الشمسية نهاراً، والاعتماد على الشبكة العامة لتعويض النقص فقط
+                            </li>
+                            <li>
+                                <span class="feature-label">الاستخدام الأمثل:</span> 
+                                الراغبين في تقليل فاتورة الكهرباء دون الحاجة إلى بطاريات تخزين أو عدادات تبادلية
+                            </li>
+                            <li>
+                                <span class="feature-label">القيد الرئيسي:</span> 
+                                لا يعمل النظام في حال انقطاع التيار الكهربائي من الشبكة العامة
+                            </li>
+                        </ul>
+                        
+                        <div class="solar-note">
+                            <span class="note-label">💬 للمزارع:</span>
+                            تشغيل المضخات والأنظمة الزراعية بالطاقة الشمسية نهاراً، والاعتماد على الشبكة العامة ليلاً. يساهم في خفض فاتورة الكهرباء بشكل ملحوظ، لكنه يتوقف عن العمل في حال انقطاع التيار الكهربائي من الشبكة العامة.
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
         </div>
-      </section>
+    </section>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects">
+   <section id="projects">
       <!-- Projects Start -->
       <div class="container-xxl py-5">
         <div class="container">
@@ -616,95 +800,179 @@
               قم بزيارة أحدث مشاريعنا في الطاقة الشمسية والمتجددة
             </h1>
           </div>
-          <div class="row mt-n2 wow fadeInUp" data-wow-delay="0.3s">
-            <div class="col-12 text-center">
-              <ul class="list-inline mb-5" id="portfolio-flters">
-                <li class="mx-2 active" data-filter="*">الكل</li>
-                <li class="mx-2" data-filter=".first">الألواح الشمسية</li>
-                <!-- <li class="mx-2" data-filter=".second">توربينات الرياح</li> -->
-                <li class="mx-2" data-filter=".third">
-                  محطات الطاقة الكهرومائية
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div
-            class="row g-4 portfolio-container wow fadeInUp"
-            data-wow-delay="0.5s"
-          >
-            <div class="col-lg-4 col-md-6 portfolio-item first">
-              <div class="portfolio-img rounded overflow-hidden">
-                <img class="img-fluid" src="img/img-600x400-6.jpg" alt="" />
-                <div class="portfolio-btn">
-                  <a
-                    class="btn btn-lg-square btn-outline-light rounded-circle mx-1"
-                    href="img/img-600x400-6.jpg"
-                    data-lightbox="portfolio"
-                    ><i class="fa fa-eye"></i
-                  ></a>
-                  <a
-                    class="btn btn-lg-square btn-outline-light rounded-circle mx-1"
-                    href=""
-                    ><i class="fa fa-link"></i
-                  ></a>
+          
+          <div class="row g-4">
+            <!-- Project 1 -->
+            <div class="col-lg-4 col-md-6 animate-on-scroll">
+              <div class="project-card">
+                <div class="project-img">
+                  <img src="/img/k1.jpg" alt="مشروع الطاقة الشمسية">
+                  <div class="project-overlay">
+                    <a href="#" data-lightbox="project-1"><i class="fas fa-search-plus"></i></a>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                  </div>
+                </div>
+                <div class="project-info">
+                  <h4 class="project-title">مشروع الطاقة الشمسية للمنازل</h4>
+                  <div class="project-address">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>سنهور - الفيوم - مصر</span>
+                  </div>
                 </div>
               </div>
-              <div class="pt-3">
-                <p class="text-primary mb-0">الألواح الشمسية</p>
-                <hr class="text-primary w-25 my-2" />
-                <h5 class="lh-base">
-                  نحن رواد في صناعة الطاقة الشمسية والمتجددة
-                </h5>
-              </div>
             </div>
-            <div class="col-lg-4 col-md-6 portfolio-item second">
-              <div class="portfolio-img rounded overflow-hidden">
-                <img class="img-fluid" src="img/img-600x400-5.jpg" alt="" />
-                <div class="portfolio-btn">
-                  <a
-                    class="btn btn-lg-square btn-outline-light rounded-circle mx-1"
-                    href="img/img-600x400-5.jpg"
-                    data-lightbox="portfolio"
-                    ><i class="fa fa-eye"></i
-                  ></a>
-                  <a
-                    class="btn btn-lg-square btn-outline-light rounded-circle mx-1"
-                    href=""
-                    ><i class="fa fa-link"></i
-                  ></a>
+            
+            <!-- Project 2 -->
+            <div class="col-lg-4 col-md-6 animate-on-scroll">
+              <div class="project-card">
+                <div class="project-img">
+                  <img src="/img/k2.jpg" alt="مشروع طاقة الرياح">
+                  <div class="project-overlay">
+                    <a href="#" data-lightbox="project-2"><i class="fas fa-search-plus"></i></a>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                  </div>
+                </div>
+                <div class="project-info">
+                  <h4 class="project-title">مزرعة رياح صغيرة للمزارع</h4>
+                  <div class="project-address">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>المنيا - مصر</span>
+                  </div>
                 </div>
               </div>
-              <div class="pt-3">
-                <p class="text-primary mb-0">توربينات الرياح</p>
-                <hr class="text-primary w-25 my-2" />
-                <h5 class="lh-base">
-                  نحن رواد في صناعة الطاقة الشمسية والمتجددة
-                </h5>
-              </div>
             </div>
-            <div class="col-lg-4 col-md-6 portfolio-item third">
-              <div class="portfolio-img rounded overflow-hidden">
-                <img class="img-fluid" src="img/img-600x400-4.jpg" alt="" />
-                <div class="portfolio-btn">
-                  <a
-                    class="btn btn-lg-square btn-outline-light rounded-circle mx-1"
-                    href="img/img-600x400-4.jpg"
-                    data-lightbox="portfolio"
-                    ><i class="fa fa-eye"></i
-                  ></a>
-                  <a
-                    class="btn btn-lg-square btn-outline-light rounded-circle mx-1"
-                    href=""
-                    ><i class="fa fa-link"></i
-                  ></a>
+            
+            <!-- Project 3 -->
+            <div class="col-lg-4 col-md-6 animate-on-scroll">
+              <div class="project-card">
+                <div class="project-img">
+                  <img src="/img/k3.jpg" alt="نظام هجين">
+                  <div class="project-overlay">
+                    <a href="#" data-lightbox="project-3"><i class="fas fa-search-plus"></i></a>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                  </div>
+                </div>
+                <div class="project-info">
+                  <h4 class="project-title">نظام هجين للطاقة المتجددة</h4>
+                  <div class="project-address">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>الجيزة - مصر</span>
+                  </div>
                 </div>
               </div>
-              <div class="pt-3">
-                <p class="text-primary mb-0">محطات الطاقة الكهرومائية</p>
-                <hr class="text-primary w-25 my-2" />
-                <h5 class="lh-base">
-                  نحن رواد في صناعة الطاقة الشمسية والمتجددة
-                </h5>
+            </div>
+            
+            <!-- Project 4 -->
+            <div class="col-lg-4 col-md-6 animate-on-scroll">
+              <div class="project-card">
+                <div class="project-img">
+                  <img src="/img/k4.jpg" alt="مشروع تجاري">
+                  <div class="project-overlay">
+                    <a href="#" data-lightbox="project-4"><i class="fas fa-search-plus"></i></a>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                  </div>
+                </div>
+                <div class="project-info">
+                  <h4 class="project-title">نظام شمسي للمراكز التجارية</h4>
+                  <div class="project-address">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>القاهرة الجديدة - مصر</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Project 5 -->
+            <div class="col-lg-4 col-md-6 animate-on-scroll">
+              <div class="project-card">
+                <div class="project-img">
+                  <img src="/img/k5.jpg" alt="مشروع صناعي">
+                  <div class="project-overlay">
+                    <a href="#" data-lightbox="project-5"><i class="fas fa-search-plus"></i></a>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                  </div>
+                </div>
+                <div class="project-info">
+                  <h4 class="project-title">محطة طاقة شمسية للمصانع</h4>
+                  <div class="project-address">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>العاشر من رمضان - مصر</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Project 6 -->
+            <div class="col-lg-4 col-md-6 animate-on-scroll">
+              <div class="project-card">
+                <div class="project-img">
+                  <img src="/img/k6.jpg" alt="مشروع زراعي">
+                  <div class="project-overlay">
+                    <a href="#" data-lightbox="project-6"><i class="fas fa-search-plus"></i></a>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                  </div>
+                </div>
+                <div class="project-info">
+                  <h4 class="project-title">طاقة شمسية للري الزراعي</h4>
+                  <div class="project-address">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>الدلتا - مصر</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 animate-on-scroll">
+              <div class="project-card">
+                <div class="project-img">
+                  <img src="/img/k8.jpg" alt="مشروع زراعي">
+                  <div class="project-overlay">
+                    <a href="#" data-lightbox="project-6"><i class="fas fa-search-plus"></i></a>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                  </div>
+                </div>
+                <div class="project-info">
+                  <h4 class="project-title">طاقة شمسية للري الزراعي</h4>
+                  <div class="project-address">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>الدلتا - مصر</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 animate-on-scroll">
+              <div class="project-card">
+                <div class="project-img">
+                  <img src="/img/k7.jpg" alt="مشروع زراعي">
+                  <div class="project-overlay">
+                    <a href="#" data-lightbox="project-6"><i class="fas fa-search-plus"></i></a>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                  </div>
+                </div>
+                <div class="project-info">
+                  <h4 class="project-title">طاقة شمسية للري الزراعي</h4>
+                  <div class="project-address">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>الدلتا - مصر</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 animate-on-scroll">
+              <div class="project-card">
+                <div class="project-img">
+                  <img src="/img/k9.jpg" alt="مشروع زراعي">
+                  <div class="project-overlay">
+                    <a href="#" data-lightbox="project-6"><i class="fas fa-search-plus"></i></a>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                  </div>
+                </div>
+                <div class="project-info">
+                  <h4 class="project-title">طاقة شمسية للري الزراعي</h4>
+                  <div class="project-address">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>الدلتا - مصر</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -714,7 +982,7 @@
     </section>
 
     <!-- Quote Section -->
-    <section id="quote">
+    <section id="quote" class="fadeInUp" data-wow-delay="0.3s">
       <!-- Quote Start -->
       <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
         <div class="container quote px-lg-0">
@@ -992,16 +1260,16 @@
         <div class="row g-5">
           <div class="col-lg-3 col-md-6">
             <h5 class="text-white mb-4">عنواننا</h5>
-            <p class="mb-2">
-              <i class="fa fa-map-marker-alt me-3"></i>123 الشارع, نيويورك,
-              الولايات المتحدة
-            </p>
-            <p class="mb-2">
-              <i class="fa fa-phone-alt me-3"></i>+012 345 67890
-            </p>
-            <p class="mb-2">
+            <a href="https://maps.apple.com/place?coordinate=30.680145,30.069258&name=%D8%A7%D9%84%D9%86%D9%88%D8%A8%D8%A7%D8%B1%D9%8A%D8%A9%20%D8%A7%D9%84%D8%AC%D8%AF%D9%8A%D8%AF%D8%A9&map=h" class="mb-2">
+              <i class="fa fa-map-marker-alt ms-3"></i>النوبارية الجديدة 
+            </a>
+            <a href="tel:+20 101 288 7315" target="_blank"  class="mt-2 mb-2" style="display: block;" >
+               <i class="fa fa-phone-alt ms-2"></i>
+           <span dir="ltr">+20 101 288 7315 </span>   
+            </a>
+            <!-- <p class="mb-2">
               <i class="fa fa-envelope me-3"></i>info@example.com
-            </p>
+            </p> -->
             <div class="d-flex pt-2">
               <a class="btn btn-square btn-outline-light btn-social" href=""
                 ><i class="fab fa-twitter"></i
@@ -1029,22 +1297,22 @@
             <h5 class="text-white mb-4">معرض المشاريع</h5>
             <div class="row g-2">
               <div class="col-4">
-                <img class="img-fluid rounded" src="img/gallery-1.jpg" alt="" />
+                <img style="object-fit: cover; height: 100px; width: 140px;" class="img-fluid rounded" src="img/k1.jpg" alt="" />
               </div>
               <div class="col-4">
-                <img class="img-fluid rounded" src="img/gallery-2.jpg" alt="" />
+                <img style="object-fit: cover; height: 100px; width: 140px;" class="img-fluid rounded" src="img/k2.jpg" alt="" />
               </div>
               <div class="col-4">
-                <img class="img-fluid rounded" src="img/gallery-3.jpg" alt="" />
+                <img style="object-fit: cover; height: 100px; width: 140px;" class="img-fluid rounded" src="img/k3.jpg" alt="" />
               </div>
               <div class="col-4">
-                <img class="img-fluid rounded" src="img/gallery-4.jpg" alt="" />
+                <img style="object-fit: cover; height: 100px; width: 140px;" class="img-fluid rounded" src="img/k5.jpg" alt="" />
               </div>
               <div class="col-4">
-                <img class="img-fluid rounded" src="img/gallery-5.jpg" alt="" />
+                <img style="object-fit: cover; height: 100px; width: 140px;" class="img-fluid rounded" src="img/k6.jpg" alt="" />
               </div>
               <div class="col-4">
-                <img class="img-fluid rounded" src="img/gallery-6.jpg" alt="" />
+                <img style="object-fit: cover; height: 100px; width: 140px;" class="img-fluid rounded" src="img/k7.jpg" alt="" />
               </div>
             </div>
           </div>
@@ -1071,11 +1339,11 @@
         <div class="copyright">
           <div class="row">
             <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-              &copy; <a href="#">سولارتك</a>, جميع الحقوق محفوظة.
+              &copy; <a href="#">نواة</a>, جميع الحقوق محفوظة.
             </div>
-            <div class="col-md-6 text-center text-md-end">
+            <!-- <div class="col-md-6 text-center text-md-end">
               صمم بواسطة <a href="https://htmlcodex.com">HTML Codex</a>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -1103,26 +1371,55 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 
-    <script>
-      // دالة للانتقال إلى قسم عرض السعر
-      function scrollToQuote() {
-        document.getElementById("quote").scrollIntoView({
-          behavior: "smooth",
+   <script>
+      // Initialize animations on scroll
+      document.addEventListener('DOMContentLoaded', function() {
+        // Hide spinner
+        setTimeout(function() {
+          document.getElementById('spinner').style.display = 'none';
+        }, 500);
+        
+        // Animate on scroll
+        const animateElements = document.querySelectorAll('.animate-on-scroll');
+        
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('animated');
+            }
+          });
+        }, { threshold: 0.1 });
+        
+        animateElements.forEach(el => {
+          observer.observe(el);
         });
-      }
+        
+        // Initialize lightbox
+        lightbox.option({
+          'resizeDuration': 200,
+          'wrapAround': true,
+          'imageFadeDuration': 300,
+          'positionFromTop': 100
+        });
+      });
 
-      // إضافة التنقل السلس لجميع روابط التنقل
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
           e.preventDefault();
-          const targetId = this.getAttribute("href");
-          if (targetId !== "#") {
-            document.querySelector(targetId).scrollIntoView({
-              behavior: "smooth",
+          
+          const targetId = this.getAttribute('href');
+          if (targetId === '#') return;
+          
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 80,
+              behavior: 'smooth'
             });
           }
         });
       });
-    </script>
+    </script>ي
   </body>
 </html>
