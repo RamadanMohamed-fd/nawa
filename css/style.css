@@ -7,6 +7,7 @@
 
 body {
   font-family: "Baloo Bhaijaan 2", sans-serif;
+overflow-x: hidden !important;
 }
 .fw-medium {
   font-weight: 500 !important;
@@ -19,6 +20,7 @@ body {
 .fw-black {
   font-weight: 900 !important;
 }
+
 
 .back-to-top {
   position: fixed;
@@ -288,6 +290,10 @@ body {
   background: var(--primary);
 }
 
+
+.service-item:hover .service-icon i{
+    color: #ffffff !important;
+}
 /*** Feature ***/
 @media (min-width: 992px) {
   .container.feature {
@@ -773,4 +779,10 @@ body {
   color: #444;
   line-height: 1.8;
   margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+  .dddd{
+display: none !important;
+  }
 }

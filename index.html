@@ -252,12 +252,6 @@
   </head>
 
   <body>
-    <!-- زر الحصول على عرض سعر -->
-    <!-- <button class="get-offer-btn" onclick="scrollToQuote()">
-      احصل على عرض سعر
-    </button> -->
-
-    <!-- Spinner Start -->
     <div
       id="spinner"
       class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
@@ -275,15 +269,16 @@
     <!-- Topbar Start -->
     <div class="container-fluid bg-dark p-0">
       <div
-        class=""
+        class="dddd"
         style="
           display: flex;
           align-items: center;
           justify-content: space-between;
           width: 100%;
+              flex-wrap: wrap;
         "
       >
-        <div class="col-lg-7 px-5">
+        <div style="display: flex; flex-wrap: wrap;" class="col-lg-7 px-5">
           <div
             style="display: flex; align-items: center; margin-top: 10px;"
             class=" d-inline-flex align-items-center"
@@ -298,6 +293,7 @@
               align-items: center;
               margin-top: 4px;
               font-family: cursive;
+           
             "
             class="h-100 d-inline-flex align-items-center me-4"
           >
@@ -385,9 +381,9 @@
         <div class="owl-carousel header-carousel position-relative">
           <div
             class="owl-carousel-item position-relative"
-            data-dot="<img src='img/carousel-1.jpg'>"
+            data-dot="<img src='img/carousel-1.png'>"
           >
-            <img class="img-fluid" src="img/carousel-1.jpg" alt="" />
+            <img class="img-fluid" src="img/carousel-1.png" alt="" />
             <div class="owl-carousel-inner">
               <div class="container">
                 <div class="row">
@@ -427,10 +423,10 @@
           </div>
           <div
             class="owl-carousel-item position-relative"
-            data-dot="<img src='img/carousel-3.jpg'>"
+            data-dot="<img src='img/carousel-3.webp'>"
             style="background: #000"
           >
-            <img class="img-fluid" src="img/carousel-3.jpg" alt="" />
+            <img class="img-fluid" src="img/carousel-3.webp" alt="" />
             <div class="owl-carousel-inner">
               <div class="container">
                 <div class="row">
@@ -536,31 +532,34 @@
               class="col-lg-6 about-text py-5 wow fadeIn"
               data-wow-delay="0.5s"
             >
-              <div class="p-lg-5 ps-lg-0">
-                <h6 class="text-primary">من نحن</h6>
-                <h1 class="mb-4">
-                  25+ سنة خبرة في صناعة الطاقة الشمسية والمتجددة
-                </h1>
-                <p>
-                  نحن شركة رائدة في مجال الطاقة المتجددة، نقدم حلولاً مبتكرة
-                  ومستدامة لتلبية احتياجات الطاقة في العصر الحديث.
-                </p>
-                <p>
-                  <i class="fa fa-check-circle text-primary ms-3"></i>حلول طاقة
-                  متكاملة
-                </p>
-                <p>
-                  <i class="fa fa-check-circle text-primary ms-3"></i>تقنيات
-                  متطورة وحديثة
-                </p>
-                <p>
-                  <i class="fa fa-check-circle text-primary ms-3"></i>فريق من
-                  الخبراء المتخصصين
-                </p>
-                <a href="" class="btn btn-primary rounded-pill py-3 px-5 mt-3"
-                  >استكشف المزيد</a
-                >
-              </div>
+          <div class="p-lg-5 ps-lg-0">
+    <h6 class="text-primary">من نحن</h6>
+    <h1 class="mb-4">
+        25+ سنة خبرة في مجال الطاقة الشمسية والمتجددة
+    </h1>
+    <p>
+        شركة نواة للطاقة الشمسية هي شركة متخصّصة في تصميم وتنفيذ أنظمة الطاقة الشمسية وفق أعلى معايير الجودة والسلامة.
+    </p>
+    <p>
+        نهدف إلى توفير حلول ذكية لتوليد الطاقة الكهربائية من الطاقة الشمسية، مما يساهم في خفض التكاليف على العملاء والحفاظ على البيئة.
+    </p>
+    <p>
+        <i class="fa fa-check-circle text-primary ms-3"></i>توفير حلول طاقة متكاملة وشاملة
+    </p>
+    <p>
+        <i class="fa fa-check-circle text-primary ms-3"></i>اعتماد تقنيات متطورة وحديثة
+    </p>
+    <p>
+        <i class="fa fa-check-circle text-primary ms-3"></i>فريق عمل من الخبراء والمتخصصين
+    </p>
+    <p>
+        بدءاً من الدراسة الفنية للموقع، وصولاً إلى التشغيل والمتابعة بعد التركيب، تقدم شركة نواة الدعم المستمر لضمان تحقيق أفضل أداء لمحطات الطاقة الشمسية.
+    </p>
+    <p>
+        نؤمن في شركة نواة بأن الطاقة الشمسية ليست مجرد مشروع، بل هي استثمار طويل المدى يحقق الراحة ويضمن مستقبلاً أكثر استدامة ونظافة.
+    </p>
+    <a href="" class="btn btn-primary rounded-pill py-3 px-5 mt-3">استكشف المزيد</a>
+</div>
             </div>
           </div>
         </div>
@@ -571,71 +570,101 @@
     <!-- Services Section -->
     <section id="services">
       <!-- Service Start -->
-      <div class="container-xxl py-5">
-        <div class="container">
-          <div
-            class="text-center mx-auto mb-5 wow fadeInUp"
-            data-wow-delay="0.1s"
-            style="max-width: 600px"
-          >
+  <div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px">
             <h6 class="text-primary">خدماتنا</h6>
-            <h1 class="mb-4">نحن رواد في عالم الطاقة المتجددة</h1>
-          </div>
-          <div class="row g-4">
+            <h1 class="mb-4">نحن رواد في مجال الطاقة المتجددة</h1>
+        </div>
+        <div class="row g-4 justify-content-center">
             <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
-              <div class="service-item rounded overflow-hidden">
-                <img class="img-fluid" src="img/img-600x400-1.jpg" alt="" />
-                <div class="position-relative p-4 pt-0">
-                  <div class="service-icon">
-                    <i class="fa fa-solar-panel fa-3x"></i>
-                  </div>
-                  <h4 class="mb-3">الألواح الشمسية</h4>
-                  <p>
-                    نقدم حلولاً شاملة لأنظمة الطاقة الشمسية للمنازل والشركات.
-                  </p>
-                  <a class="small fw-medium" href=""
-                    >اقرأ المزيد<i class="fa fa-arrow-left ms-2"></i
-                  ></a>
+                <div class="service-item rounded overflow-hidden">
+                    <img class="img-fluid" src="img/img-600x400-1.jpg" alt="محطات ضخ المياه بالطاقة الشمسية" />
+                    <div class="position-relative p-4 pt-0">
+                        <div class="service-icon">
+                            <i class="fa fa-water fa-3x"></i>
+                        </div>
+                        <h4 class="mb-3">محطات ضخ المياه بالطاقة الشمسية</h4>
+                        <p>
+                            حلول متكاملة للمزارع والآبار تضمن تشغيلاً مستمراً دون اعتماد على شبكة الكهرباء
+                        </p>
+                        <a class="small fw-medium" href="">
+                            اقرأ المزيد<i class="fa fa-arrow-left ms-2"></i>
+                        </a>
+                    </div>
                 </div>
-              </div>
             </div>
             <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-              <div class="service-item rounded overflow-hidden">
-                <img class="img-fluid" src="img/img-600x400-2.jpg" alt="" />
-                <div class="position-relative p-4 pt-0">
-                  <div class="service-icon">
-                    <i class="fa fa-wind fa-3x"></i>
-                  </div>
-                  <h4 class="mb-3">توربينات الرياح</h4>
-                  <p>
-                    أنظمة طاقة الرياح المتطورة لتوليد الطاقة النظيفة والمستدامة.
-                  </p>
-                  <a class="small fw-medium" href=""
-                    >اقرأ المزيد<i class="fa fa-arrow-left ms-2"></i
-                  ></a>
+                <div class="service-item rounded overflow-hidden">
+                    <img class="img-fluid" src="img/img-600x400-2.jpg" alt="أنظمة الطاقة الشمسية للمنازل" />
+                    <div class="position-relative p-4 pt-0">
+                        <div class="service-icon">
+                            <i class="fa fa-home fa-3x"></i>
+                        </div>
+                        <h4 class="mb-3">أنظمة الطاقة الشمسية للمنازل</h4>
+                        <p>
+                            حلول ذكية تخفض استهلاك الكهرباء من الشبكة وتوفر طاقة نظيفة ومستدامة على مدار اليوم
+                        </p>
+                        <a class="small fw-medium" href="">
+                            اقرأ المزيد<i class="fa fa-arrow-left ms-2"></i>
+                        </a>
+                    </div>
                 </div>
-              </div>
             </div>
             <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-              <div class="service-item rounded overflow-hidden">
-                <img class="img-fluid" src="img/img-600x400-3.jpg" alt="" />
-                <div class="position-relative p-4 pt-0">
-                  <div class="service-icon">
-                    <i class="fa fa-lightbulb fa-3x"></i>
-                  </div>
-                  <h4 class="mb-3">محطات الطاقة الكهرومائية</h4>
-                  <p>
-                    حلول الطاقة الكهرومائية الصغيرة والمتوسطة للمجتمعات المحلية.
-                  </p>
-                  <a class="small fw-medium" href=""
-                    >اقرأ المزيد<i class="fa fa-arrow-left ms-2"></i
-                  ></a>
+                <div class="service-item rounded overflow-hidden">
+                    <img class="img-fluid" src="img/img-600x400-3.jpg" alt="المحطات التجارية والصناعية" />
+                    <div class="position-relative p-4 pt-0">
+                        <div class="service-icon">
+                            <i class="fa fa-industry fa-3x"></i>
+                        </div>
+                        <h4 class="mb-3">المحطات التجارية والصناعية</h4>
+                        <p>
+                            حلول متكاملة للمصانع والشركات لتخفيض التكاليف التشغيلية وتحسين كفاءة استهلاك الطاقة
+                        </p>
+                        <a class="small fw-medium" href="">
+                            اقرأ المزيد<i class="fa fa-arrow-left ms-2"></i>
+                        </a>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item rounded overflow-hidden">
+                    <img class="img-fluid" src="img/img-600x400-4.jpg" alt="توريد وتركيب المعدات" />
+                    <div class="position-relative p-4 pt-0">
+                        <div class="service-icon">
+                            <i class="fa fa-solar-panel fa-3x"></i>
+                        </div>
+                        <h4 class="mb-3">توريد وتركيب المعدات</h4>
+                        <p>
+                            توريد وتركيب الألواح الشمسية والأنفرترات بأفضل الماركات العالمية وأطول فترات الضمان
+                        </p>
+                        <a class="small fw-medium" href="">
+                            اقرأ المزيد<i class="fa fa-arrow-left ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="service-item rounded overflow-hidden">
+                    <img class="img-fluid" src="img/img-600x400-5.jpg" alt="الصيانة والدعم الفني" />
+                    <div class="position-relative p-4 pt-0">
+                        <div class="service-icon">
+                            <i class="fa fa-tools fa-3x"></i>
+                        </div>
+                        <h4 class="mb-3">الصيانة والدعم الفني</h4>
+                        <p>
+                            خدمات صيانة شاملة ودعم فني مستمر لضمان الأداء الأمثل لأنظمة الطاقة الشمسية بعد التركيب
+                        </p>
+                        <a class="small fw-medium" href="">
+                            اقرأ المزيد<i class="fa fa-arrow-left ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+    </div>
+</div>
       <!-- Service End -->
 
       <section class="py-5 bg-white" id="solar-systems">
@@ -786,200 +815,365 @@
     </section>
 
     <!-- Projects Section -->
-   <section id="projects">
-      <!-- Projects Start -->
-      <div class="container-xxl py-5">
+<section id="projects">
+    <!-- Projects Start -->
+    <div class="container-xxl py-5">
         <div class="container">
-          <div
-            class="text-center mx-auto mb-5 wow fadeInUp"
-            data-wow-delay="0.1s"
-            style="max-width: 600px"
-          >
-            <h6 class="text-primary">مشاريعنا</h6>
-            <h1 class="mb-4">
-              قم بزيارة أحدث مشاريعنا في الطاقة الشمسية والمتجددة
-            </h1>
-          </div>
-          
-          <div class="row g-4">
-            <!-- Project 1 -->
-            <div class="col-lg-4 col-md-6 animate-on-scroll">
-              <div class="project-card">
-                <div class="project-img">
-                  <img src="img/k1.jpg" alt="مشروع الطاقة الشمسية">
-                  <div class="project-overlay">
-                    <a href="#" data-lightbox="project-1"><i class="fas fa-search-plus"></i></a>
-                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                  </div>
-                </div>
-                <div class="project-info">
-                  <h4 class="project-title">مشروع الطاقة الشمسية للمنازل</h4>
-                  <div class="project-address">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>سنهور - الفيوم - مصر</span>
-                  </div>
-                </div>
-              </div>
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px">
+                <h6 class="text-primary">مشاريعنا</h6>
+                <h1 class="mb-4">
+                    قم بزيارة أحدث مشاريعنا في الطاقة الشمسية والمتجددة
+                </h1>
             </div>
             
-            <!-- Project 2 -->
-            <div class="col-lg-4 col-md-6 animate-on-scroll">
-              <div class="project-card">
-                <div class="project-img">
-                  <img src="img/k2.jpg" alt="مشروع طاقة الرياح">
-                  <div class="project-overlay">
-                    <a href="#" data-lightbox="project-2"><i class="fas fa-search-plus"></i></a>
-                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                  </div>
+            <div class="row g-4">
+                <!-- Project 1 -->
+                <div class="col-lg-4 col-md-6 animate-on-scroll">
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="img/k1.jpg" alt="تركيب الألواح الشمسية في المنيا">
+                            <div class="project-overlay">
+                                <a href="#" data-lightbox="project-1"><i class="fas fa-search-plus"></i></a>
+                                <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h4 class="project-title">تركيب نظام شمسي متكامل</h4>
+                            <p class="project-description">
+                                تركيب الألواح الشمسية في منطقة مدق البترول وفق أعلى معايير الجودة والسلامة
+                            </p>
+                            <div class="project-address">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>مدق البترول - المنيا - مصر</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="project-info">
-                  <h4 class="project-title">مزرعة رياح صغيرة للمزارع</h4>
-                  <div class="project-address">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>المنيا - مصر</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+                
             
-            <!-- Project 3 -->
-            <div class="col-lg-4 col-md-6 animate-on-scroll">
-              <div class="project-card">
-                <div class="project-img">
-                  <img src="img/k3.jpg" alt="نظام هجين">
-                  <div class="project-overlay">
-                    <a href="#" data-lightbox="project-3"><i class="fas fa-search-plus"></i></a>
-                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                  </div>
+                
+                <!-- Project 6 -->
+                <div class="col-lg-4 col-md-6 animate-on-scroll">
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="img/k6.jpg" alt="تركيب الهياكل الشمسية">
+                            <div class="project-overlay">
+                                <a href="#" data-lightbox="project-6"><i class="fas fa-search-plus"></i></a>
+                                <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h4 class="project-title">تركيب هياكل الطاقة الشمسية</h4>
+                            <p class="project-description">
+                                تركيب هياكل شاسيه متخصصة تدعم الألواح الشمسية بشكل آمن ومستقر
+                            </p>
+                            <div class="project-address">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>الدلتا - مصر</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="project-info">
-                  <h4 class="project-title">نظام هجين للطاقة المتجددة</h4>
-                  <div class="project-address">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>الجيزة - مصر</span>
-                  </div>
+
+                <!-- Project 7 -->
+                <div class="col-lg-4 col-md-6 animate-on-scroll">
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="img/k7.jpg" alt="ضبط زوايا الميل الدقيقة">
+                            <div class="project-overlay">
+                                <a href="#" data-lightbox="project-7"><i class="fas fa-search-plus"></i></a>
+                                <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h4 class="project-title">ضبط زوايا الميل الدقيقة</h4>
+                            <p class="project-description">
+                                اهتمامنا بضبط زوايا الميل الدقيقة لضمان أقصى استفادة من أشعة الشمس على مدار اليوم
+                            </p>
+                            <div class="project-address">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>الجيزة - مصر</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
+
+                <!-- Project 8 -->
+                <div class="col-lg-4 col-md-6 animate-on-scroll">
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="img/k8.jpg" alt="أنظمة التثبيت الآمن">
+                            <div class="project-overlay">
+                                <a href="#" data-lightbox="project-8"><i class="fas fa-search-plus"></i></a>
+                                <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h4 class="project-title">أنظمة التثبيت الآمن</h4>
+                            <p class="project-description">
+                                أنظمة تثبيت متينة ومقاومة للعوامل الطبيعية تضمن استقرار المحطات الشمسية لفترات طويلة
+                            </p>
+                            <div class="project-address">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>الإسكندرية - مصر</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 9 -->
+                <div class="col-lg-4 col-md-6 animate-on-scroll">
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="img/k9.jpg" alt="أنظمة الري بالطاقة الشمسية">
+                            <div class="project-overlay">
+                                <a href="#" data-lightbox="project-9"><i class="fas fa-search-plus"></i></a>
+                                <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h4 class="project-title">أنظمة الري بالطاقة الشمسية</h4>
+                            <p class="project-description">
+                                تركيب أنظمة ري تعمل بالطاقة الشمسية للمزارع لتوفير تكاليف التشغيل وزيادة الإنتاجية
+                            </p>
+                            <div class="project-address">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>الدلتا - مصر</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <!-- Project 2 -->
+                <div class="col-lg-4 col-md-6 animate-on-scroll">
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="img/k2.jpg" alt="لوحة التحكم الرئيسية">
+                            <div class="project-overlay">
+                                <a href="#" data-lightbox="project-2"><i class="fas fa-search-plus"></i></a>
+                                <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h4 class="project-title">لوحة التحكم الرئيسية</h4>
+                            <p class="project-description">
+                                تصميم وتنفيذ لوحة التحكم الرئيسية وفق المواصفات الهندسية العالمية وأعلى معايير الأمان
+                            </p>
+                            <div class="project-address">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>المنيا - مصر</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="col-lg-4 col-md-6 animate-on-scroll">
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="img/k3.jpg" alt="نظام الطاقة المنعزل">
+                            <div class="project-overlay">
+                                <a href="#" data-lightbox="project-3"><i class="fas fa-search-plus"></i></a>
+                                <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h4 class="project-title">نظام طاقة منعزل متكامل</h4>
+                            <p class="project-description">
+                                تركيب نظام أوف غريد متكامل يشمل الأنفرترات والبطاريات لتوفير طاقة مستدامة ومنعزلة
+                            </p>
+                            <div class="project-address">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>العلمين - مصر</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="col-lg-4 col-md-6 animate-on-scroll">
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="img/k4.jpg" alt="هياكل التثبيت الصناعية">
+                            <div class="project-overlay">
+                                <a href="#" data-lightbox="project-4"><i class="fas fa-search-plus"></i></a>
+                                <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h4 class="project-title">هياكل تثبيت صناعية متخصصة</h4>
+                            <p class="project-description">
+                                تصنيع وتركيب هياكل التثبيت وفق مواصفات فنية خاصة تضمن المتانة والاستدامة
+                            </p>
+                            <div class="project-address">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>مدينة السادات - مصر</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 5 -->
+                <div class="col-lg-4 col-md-6 animate-on-scroll">
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="img/k5.jpg" alt="نظام شمسي صناعي">
+                            <div class="project-overlay">
+                                <a href="#" data-lightbox="project-5"><i class="fas fa-search-plus"></i></a>
+                                <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h4 class="project-title">محطة طاقة شمسية للمصانع</h4>
+                            <p class="project-description">
+                                تنفيذ محطات طاقة شمسية متكاملة للمنشآت الصناعية لتقليل تكاليف التشغيل
+                            </p>
+                            <div class="project-address">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>العاشر من رمضان - مصر</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            
-            <!-- Project 4 -->
-            <div class="col-lg-4 col-md-6 animate-on-scroll">
-              <div class="project-card">
-                <div class="project-img">
-                  <img src="img/k4.jpg" alt="مشروع تجاري">
-                  <div class="project-overlay">
-                    <a href="#" data-lightbox="project-4"><i class="fas fa-search-plus"></i></a>
-                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                  </div>
-                </div>
-                <div class="project-info">
-                  <h4 class="project-title">نظام شمسي للمراكز التجارية</h4>
-                  <div class="project-address">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>القاهرة الجديدة - مصر</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <!-- Project 5 -->
-            <div class="col-lg-4 col-md-6 animate-on-scroll">
-              <div class="project-card">
-                <div class="project-img">
-                  <img src="img/k5.jpg" alt="مشروع صناعي">
-                  <div class="project-overlay">
-                    <a href="#" data-lightbox="project-5"><i class="fas fa-search-plus"></i></a>
-                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                  </div>
-                </div>
-                <div class="project-info">
-                  <h4 class="project-title">محطة طاقة شمسية للمصانع</h4>
-                  <div class="project-address">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>العاشر من رمضان - مصر</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <!-- Project 6 -->
-            <div class="col-lg-4 col-md-6 animate-on-scroll">
-              <div class="project-card">
-                <div class="project-img">
-                  <img src="img/k6.jpg" alt="مشروع زراعي">
-                  <div class="project-overlay">
-                    <a href="#" data-lightbox="project-6"><i class="fas fa-search-plus"></i></a>
-                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                  </div>
-                </div>
-                <div class="project-info">
-                  <h4 class="project-title">طاقة شمسية للري الزراعي</h4>
-                  <div class="project-address">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>الدلتا - مصر</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 animate-on-scroll">
-              <div class="project-card">
-                <div class="project-img">
-                  <img src="img/k8.jpg" alt="مشروع زراعي">
-                  <div class="project-overlay">
-                    <a href="#" data-lightbox="project-6"><i class="fas fa-search-plus"></i></a>
-                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                  </div>
-                </div>
-                <div class="project-info">
-                  <h4 class="project-title">طاقة شمسية للري الزراعي</h4>
-                  <div class="project-address">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>الدلتا - مصر</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 animate-on-scroll">
-              <div class="project-card">
-                <div class="project-img">
-                  <img src="img/k7.jpg" alt="مشروع زراعي">
-                  <div class="project-overlay">
-                    <a href="#" data-lightbox="project-6"><i class="fas fa-search-plus"></i></a>
-                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                  </div>
-                </div>
-                <div class="project-info">
-                  <h4 class="project-title">طاقة شمسية للري الزراعي</h4>
-                  <div class="project-address">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>الدلتا - مصر</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 animate-on-scroll">
-              <div class="project-card">
-                <div class="project-img">
-                  <img src="img/k9.jpg" alt="مشروع زراعي">
-                  <div class="project-overlay">
-                    <a href="#" data-lightbox="project-6"><i class="fas fa-search-plus"></i></a>
-                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                  </div>
-                </div>
-                <div class="project-info">
-                  <h4 class="project-title">طاقة شمسية للري الزراعي</h4>
-                  <div class="project-address">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>الدلتا - مصر</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-      <!-- Projects End -->
-    </section>
+    </div>
+    <!-- Projects End -->
+</section>
+
+
+<!-- Section 3: Why Choose Nawa? -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="position-relative overflow-hidden rounded">
+                    <img  class="img-fluid w-100" src="img/img-600x400-4.jpg" alt="فريق نواة للطاقة الشمسية">
+                </div>
+            </div>
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="h-100">
+                    <h6 class="text-primary">لماذا تختار نواة؟</h6>
+                    <h1 class="mb-4">نواة... شريك نجاحك في عالم الطاقة الشمسية</h1>
+                    <p class="mb-4">
+                        نواة ليست مجرد شركة تركيب ألواح شمسية، بل هي شريك نجاح يضع مصلحتك في المقام الأول. 
+                        نحن نؤمن ببناء علاقات دائمة مع عملائنا من خلال تقديم حلول متميزة وخدمة مستدامة.
+                    </p>
+                    <div class="row g-3">
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center">
+                                <i class="fa fa-check-circle text-primary me-2"></i>
+                                <span>خبرة فنية عالية في تصميم الأنظمة وتشغيلها بكفاءة</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center">
+                                <i class="fa fa-check-circle text-primary me-2"></i>
+                                <span>خامات معتمدة وضمان حقيقي على جميع المكونات</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center">
+                                <i class="fa fa-check-circle text-primary me-2"></i>
+                                <span>متابعة وصيانة دورية لضمان أفضل أداء للمحطة</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center">
+                                <i class="fa fa-check-circle text-primary me-2"></i>
+                                <span>دعم فني سريع ومستمر على مدار الساعة</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="d-flex align-items-center">
+                                <i class="fa fa-check-circle text-primary me-2"></i>
+                                <span>دراسة مجانية شاملة لاستهلاك الطاقة وتكلفة المشروع</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="mt-4 mb-4">
+                        مع نواة، أنت لا تشتري محطة شمسية فحسب، بل تبدأ استثماراً مضمون العوائد... 
+                        ونحن شريكك الموثوق في هذه الرحلة.
+                    </p>
+                 <a class="btn btn-primary rounded-pill py-3 px-5" href="https://wa.me/201012887315?text=مرحباً، أود الحصول على استشارة مجانية حول الطاقة الشمسية" target="_blank">احصل على استشارة مجانية</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Section 4: Benefits of Solar Energy -->
+<div class="container-xxl bg-light py-5">
+    <div class="container">
+        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px">
+            <h6 class="text-primary">فوائد الطاقة الشمسية</h6>
+            <h1 class="mb-4">الطاقة الشمسية... استثمار ذكي لمستقبل مستدام</h1>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item bg-white rounded p-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="service-icon rounded-circle me-3">
+                            <i class="fa fa-money-bill-wave fa-2x text-primary"></i>
+                        </div>
+                        <h4 class="mb-0">توفير في التكاليف</h4>
+                    </div>
+                    <p class="mb-0">توفير كبير في فاتورة الكهرباء يبدأ من الشهر الأول لتشغيل النظام</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="service-item bg-white rounded p-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="service-icon rounded-circle me-3">
+                            <i class="fa fa-bolt fa-2x text-primary"></i>
+                        </div>
+                        <h4 class="mb-0">استقلال طاقي</h4>
+                    </div>
+                    <p class="mb-0">استقلالية عن شبكة الكهرباء الحكومية في أوقات الانقطاع وضعف التيار</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="service-item bg-white rounded p-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="service-icon rounded-circle me-3">
+                            <i class="fa fa-calendar-alt fa-2x text-primary"></i>
+                        </div>
+                        <h4 class="mb-0">عمر طويل</h4>
+                    </div>
+                    <p class="mb-0">عمر تشغيلي طويل للنظام يصل إلى أكثر من 25 سنة بأداء مضمون</p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item bg-white rounded p-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="service-icon rounded-circle me-3">
+                            <i class="fa fa-leaf fa-2x text-primary"></i>
+                        </div>
+                        <h4 class="mb-0">حماية البيئة</h4>
+                    </div>
+                    <p class="mb-0">المساهمة في الحفاظ على البيئة وتقليل انبعاثات الكربون</p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="service-item bg-white rounded p-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="service-icon rounded-circle me-3">
+                            <i class="fa fa-home fa-2x text-primary"></i>
+                        </div>
+                        <h4 class="mb-0">زيادة القيمة</h4>
+                    </div>
+                    <p class="mb-0">زيادة في قيمة العقار أو المنشأة المزودة بنظام الطاقة الشمسية</p>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-5 wow fadeInUp" data-wow-delay="0.1s">
+            <p class="mb-4 lead">
+                الشمس تشرق كل يوم... فلماذا لا تجعل نورها يعمل لصالحك ويوفر لك؟
+            </p>
+<a class="btn btn-primary rounded-pill py-3 px-5" href="https://wa.me/201012887315?text=مرحباً، أود البدء في مشروع طاقة شمسي و أستفسار عن التفاصيل" target="_blank">ابدأ مشروعك الشمسي الآن</a>        </div>
+    </div>
+</div>
+
+
 
     <!-- Quote Section -->
     <section id="quote" class="fadeInUp" data-wow-delay="0.3s">
@@ -1071,185 +1265,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact">
-      <!-- Team Start -->
-      <div class="container-xxl py-5">
-        <div class="container">
-          <div
-            class="text-center mx-auto mb-5 wow fadeInUp"
-            data-wow-delay="0.1s"
-            style="max-width: 600px"
-          >
-            <h6 class="text-primary">أعضاء الفريق</h6>
-            <h1 class="mb-4">فريقنا ذو الخبرة الواسعة</h1>
-          </div>
-          <div class="row g-4">
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-              <div class="team-item rounded overflow-hidden">
-                <div class="d-flex">
-                  <img class="img-fluid w-75" src="img/team-1.jpg" alt="" />
-                  <div class="team-social w-25">
-                    <a
-                      class="btn btn-lg-square btn-outline-primary rounded-circle mt-3"
-                      href=""
-                      ><i class="fab fa-facebook-f"></i
-                    ></a>
-                    <a
-                      class="btn btn-lg-square btn-outline-primary rounded-circle mt-3"
-                      href=""
-                      ><i class="fab fa-twitter"></i
-                    ></a>
-                    <a
-                      class="btn btn-lg-square btn-outline-primary rounded-circle mt-3"
-                      href=""
-                      ><i class="fab fa-instagram"></i
-                    ></a>
-                  </div>
-                </div>
-                <div class="p-4">
-                  <h5>أحمد محمد</h5>
-                  <span>مدير المشاريع</span>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-              <div class="team-item rounded overflow-hidden">
-                <div class="d-flex">
-                  <img class="img-fluid w-75" src="img/team-2.jpg" alt="" />
-                  <div class="team-social w-25">
-                    <a
-                      class="btn btn-lg-square btn-outline-primary rounded-circle mt-3"
-                      href=""
-                      ><i class="fab fa-facebook-f"></i
-                    ></a>
-                    <a
-                      class="btn btn-lg-square btn-outline-primary rounded-circle mt-3"
-                      href=""
-                      ><i class="fab fa-twitter"></i
-                    ></a>
-                    <a
-                      class="btn btn-lg-square btn-outline-primary rounded-circle mt-3"
-                      href=""
-                      ><i class="fab fa-instagram"></i
-                    ></a>
-                  </div>
-                </div>
-                <div class="p-4">
-                  <h5>فاطمة عبدالله</h5>
-                  <span>مهندسة طاقة متجددة</span>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-              <div class="team-item rounded overflow-hidden">
-                <div class="d-flex">
-                  <img class="img-fluid w-75" src="img/team-3.jpg" alt="" />
-                  <div class="team-social w-25">
-                    <a
-                      class="btn btn-lg-square btn-outline-primary rounded-circle mt-3"
-                      href=""
-                      ><i class="fab fa-facebook-f"></i
-                    ></a>
-                    <a
-                      class="btn btn-lg-square btn-outline-primary rounded-circle mt-3"
-                      href=""
-                      ><i class="fab fa-twitter"></i
-                    ></a>
-                    <a
-                      class="btn btn-lg-square btn-outline-primary rounded-circle mt-3"
-                      href=""
-                      ><i class="fab fa-instagram"></i
-                    ></a>
-                  </div>
-                </div>
-                <div class="p-4">
-                  <h5>خالد إبراهيم</h5>
-                  <span>خبير أنظمة شمسية</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Team End -->
-
-      <!-- Testimonial Start -->
-      <div class="container-xxl py-5">
-        <div class="container">
-          <div
-            class="text-center mx-auto mb-5 wow fadeInUp"
-            data-wow-delay="0.1s"
-            style="max-width: 600px"
-          >
-            <h6 class="text-primary">آراء العملاء</h6>
-            <h1 class="mb-4">ماذا يقول عملاؤنا!</h1>
-          </div>
-          <div
-            class="owl-carousel testimonial-carousel wow fadeInUp"
-            data-wow-delay="0.1s"
-          >
-            <div class="testimonial-item text-center">
-              <div class="testimonial-img position-relative">
-                <img
-                  class="img-fluid rounded-circle mx-auto mb-5"
-                  src="img/testimonial-1.jpg"
-                />
-                <div class="btn-square bg-primary rounded-circle">
-                  <i class="fa fa-quote-left text-white"></i>
-                </div>
-              </div>
-              <div class="testimonial-text text-center rounded p-4">
-                <p>
-                  فريق محترف وخدمة ممتازة. قاموا بتركيب نظام الطاقة الشمسية
-                  لمنزلي وكانت النتيجة رائعة. أوصي بهم بشدة.
-                </p>
-                <h5 class="mb-1">محمد السيد</h5>
-                <span class="fst-italic">عميل</span>
-              </div>
-            </div>
-            <div class="testimonial-item text-center">
-              <div class="testimonial-img position-relative">
-                <img
-                  class="img-fluid rounded-circle mx-auto mb-5"
-                  src="img/testimonial-2.jpg"
-                />
-                <div class="btn-square bg-primary rounded-circle">
-                  <i class="fa fa-quote-left text-white"></i>
-                </div>
-              </div>
-              <div class="testimonial-text text-center rounded p-4">
-                <p>
-                  خبرة واسعة واحترافية عالية. مشروعنا مع الشركة كان ناجحاً بكل
-                  المقاييس. شكراً لفريق سولارتك.
-                </p>
-                <h5 class="mb-1">سارة عبد الرحمن</h5>
-                <span class="fst-italic">مديرة شركة</span>
-              </div>
-            </div>
-            <div class="testimonial-item text-center">
-              <div class="testimonial-img position-relative">
-                <img
-                  class="img-fluid rounded-circle mx-auto mb-5"
-                  src="img/testimonial-3.jpg"
-                />
-                <div class="btn-square bg-primary rounded-circle">
-                  <i class="fa fa-quote-left text-white"></i>
-                </div>
-              </div>
-              <div class="testimonial-text text-center rounded p-4">
-                <p>
-                  الدعم الفني ممتاز والخدمة بعد البيع رائعة. أنصح الجميع
-                  بالتعامل مع سولارتك للحلول الطاقة المتجددة.
-                </p>
-                <h5 class="mb-1">علي حسن</h5>
-                <span class="fst-italic">رجل أعمال</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Testimonial End -->
-    </section>
+ 
 
     <!-- Footer Start -->
     <div
@@ -1353,6 +1369,7 @@
     <!-- Back to Top -->
     <a
       href="#"
+  
       class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"
       ><i class="bi bi-arrow-up"></i
     ></a>
@@ -1420,6 +1437,6 @@
           }
         });
       });
-    </script>ي
+    </script>
   </body>
 </html>
